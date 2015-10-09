@@ -1,6 +1,7 @@
 package com.lex.zhbj.activity;
 
 import com.lex.zhbj.R;
+import com.lex.zhbj.utils.PreferencesUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,7 +20,7 @@ public class SplashActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_splash);
 		startAnim();
 	}
 	
@@ -59,9 +60,7 @@ public class SplashActivity extends Activity{
 
 			@Override
 			public void onAnimationEnd(Animation animation) {
-				Intent intent = new Intent(SplashActivity.this,GuideActivity.class);
-				startActivity(intent);
-				finish();
+				jumpGuide();
 			}
 
 			@Override
@@ -72,6 +71,18 @@ public class SplashActivity extends Activity{
 		});
 		
 		rl_root.startAnimation(set);
+	}
+	
+	private void jumpGuide() {
+		boolean isShowed = PreferencesUtil.getBoolean(this, "is_user_guide_showed", false);
+		if(!isShowed) {
+			Intent intent = new Intent(SplashActivity.this,GuideActivity.class);
+			startActivity(intent);
+		} else {
+			Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+			startActivity(intent);
+		}
+		finish();
 	}
 
 }

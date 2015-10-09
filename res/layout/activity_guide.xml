@@ -18,6 +18,27 @@
             android:textColor="@drawable/btn_guide_text_selector"
             android:paddingLeft="3dp"
             android:paddingRight="3dp"
+            android:visibility="gone"
             android:text="开始体验"/>
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp">
+        
+        <LinearLayout android:id="@+id/ll_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <View android:id="@+id/view_point"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/guide_red_shape"/>
+        
+    </RelativeLayout>
+    
 
 </RelativeLayout>
