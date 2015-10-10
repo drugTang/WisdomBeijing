@@ -81,6 +81,7 @@ public class GuideActivity extends Activity {
 				PreferencesUtil.setBoolean(GuideActivity.this, "is_user_guide_showed", true);
 				Intent intent = new Intent(GuideActivity.this,MainActivity.class);
 				startActivity(intent);
+				finish();
 			}
 			
 		});
