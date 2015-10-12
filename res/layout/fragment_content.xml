@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     
-    <TextView android:layout_width="wrap_content"
+    <com.lex.zhbj.view.NoScrollViewPager 
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    
+    <RadioGroup android:id="@+id/rg_group"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我是主页面"/>
+        android:background="@drawable/bottom_tab_bg"
+        android:orientation="horizontal">
+        
+        <RadioButton android:id="@+id/radio_home"
+            style="@style/radioTheme"
+            android:drawableTop="@drawable/btn_tab_home_selector"
+            android:text="@string/radio_home"/>
+        <RadioButton android:id="@+id/radio_news"
+            style="@style/radioTheme"
+            android:drawableTop="@drawable/btn_tab_news_selector"
+            android:text="@string/radio_news"/>
+        <RadioButton android:id="@+id/radio_smart"
+            style="@style/radioTheme"
+            android:drawableTop="@drawable/btn_tab_smart_selector"
+            android:text="@string/radio_smart"/>
+        <RadioButton android:id="@+id/radio_gov"
+            style="@style/radioTheme"
+            android:drawableTop="@drawable/btn_tab_gov_selector"
+            android:text="@string/radio_gov"/>
+        <RadioButton android:id="@+id/radio_setting"
+            style="@style/radioTheme"
+            android:drawableTop="@drawable/btn_tab_setting_selector"
+            android:text="@string/radio_setting"/>
+        
+    </RadioGroup>
 
-</RelativeLayout>
+</LinearLayout>

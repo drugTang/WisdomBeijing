@@ -1,5 +1,20 @@
 <resources>
 
     <string name="app_name">zhbj</string>
+    
+    <!-- 上部标题名 -->
+    <string name="title_home">智慧北京</string>
+    <string name="title_news">新闻</string>
+    <string name="title_smart">服务</string>
+    <string name="title_gov">政务</string>
+    <string name="title_setting">设置</string>
+    
+    
+    <!-- 底部Tab名 -->
+    <string name="radio_home">首页</string>
+    <string name="radio_news">新闻</string>
+    <string name="radio_smart">服务</string>
+    <string name="radio_gov">政务</string>
+    <string name="radio_setting">设置</string>
 
 </resources>
